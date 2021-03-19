@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="curandero" class="modelo.entidad.Healer">	
+	<property name="puntosVida" value="180"></property>
+	<property name="nombre" value="Glorfindel"></property>
+	<property name="nivel" value="4"></property>
+	<property name="iniciativa" value="3"></property>
+	<property name="arma">
+		<bean class="modelo.entidad.Rezo">
+			<property name="dañoMaximo" value="150"></property>
+			<property name="dañoMinimo" value="10"></property>
+			<property name="tipo" value="Hobbiton"></property>
+		</bean>
+	</property>
+</bean>
+
+
+
+<bean id="guerrero" class="modelo.entidad.Guerrero">
+	<property name="puntosVida" value="200"></property>
+	<property name="nombre" value="Aragon"></property>
+	<property name="nivel" value="2"></property>
+	<property name="iniciativa" value="4"></property>
+	<property name="arma">
+		<bean class="modelo.entidad.Espada">
+			<property name="dañoMaximo" value="170"></property>
+			<property name="dañoMinimo" value="20"></property>
+			<property name="tipo" value="Delagua"></property>
+		</bean>
+	</property>
+</bean>
+
+<bean id="mago" class="modelo.entidad.Mago">
+	<property name="puntosVida" value="120"></property>
+	<property name="nombre" value="Gandalf"></property>
+	<property name="nivel" value="2"></property>
+	<property name="iniciativa" value="4"></property>
+	<property name="arma">
+		<bean class="modelo.entidad.Hechizo">
+			<property name="dañoMaximo" value="190"></property>
+			<property name="dañoMinimo" value="10"></property>
+			<property name="tipo" value="Kheled-zâram"></property>
+		</bean>
+	</property>
+</bean>
+	
+
+</beans>
